@@ -1,10 +1,24 @@
 @charset "utf-8";
 
 .Boxdata {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 4 colunas com largura igual */
+    grid-template-rows: repeat(4, 1fr);  /*  3 linhas com altura igual */
+    gap: 0px;
+
+
     height: 531px;
     width: 375px;
     background-color: #FFFFFF;
     margin-top: -45px;
     border-radius: 5% 5% 5% 5%;
     filter: drop-shadow(0px -16px 40px rgba(0, 0, 0, 0.20));;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: Barlow;
 }
