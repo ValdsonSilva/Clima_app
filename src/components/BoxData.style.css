@@ -20,5 +20,6 @@ p {
     justify-content: center;
     align-items: center;
     color: black;
-    font-family: Barlow;
+    font-family: 'Barlow';
+    font-weight: 600;
 }

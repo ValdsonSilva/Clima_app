@@ -1,0 +1,30 @@
+Consulta a api com useEffect
+
+useEffect(() => {
+fetch(minha_url)
+.then((rep) => rep.json())
+.then((data) => {
+    setData(data)
+})
+.catch((err) => console.log(err))
+})
+
+console.info(data)
+
+-----------------------------------------
+
+consulta consulta com useQuery
+
+const {data, isFetching, erro} = useQuery('dados', async () => {
+    const response = await axios.get(url);
+
+    return response.data;
+})
+
+               ou
+
+const {data, isFetchin, erro, isLoading} = useQuery('dados', async () => {
+    const response = await fetch(url)
+                     .then((resp) => resp.json())
+                     .then((dados) => dados.data)
+})
