@@ -28,3 +28,25 @@ const {data, isFetchin, erro, isLoading} = useQuery('dados', async () => {
                      .then((resp) => resp.json())
                      .then((dados) => dados.data)
 })
+-------------------------------------------------------------------------------------
+Uso dos métodos indexOf e substring da classe String do js 
+
+Com o método indexOf podemos especificar uma substring dentro de uma string principal
+
+exemplo:  string.indexOf(substring, indiceInicial)
+
+substring = A substring que você deseja encontrar na string.
+indiceInicial(opcional) =  O índice a partir do qual a busca deve começar. 
+Se não for fornecido, a busca começa no início da string.
+
+exemplo real: const str = "Esta é uma string de exemplo";
+
+                    // Encontrar a primeira ocorrência de "é" na string
+                    const indice1 = str.indexOf("é"); // Resultado: 5
+
+Método substring
+
+O método substring da classe String extrai os caracteres 
+que desejamos que esteja na string
+de descarta o resto  
+const var = String.substring(string_que_fica, string_que_some).trim()

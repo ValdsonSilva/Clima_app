@@ -2,8 +2,8 @@
 
 .Boxdata {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 4 colunas com largura igual */
-    grid-template-rows: repeat(4, 1fr);  /*  3 linhas com altura igual */
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas com largura igual */
+    grid-template-rows: repeat(4, 1fr);  /*  4 linhas com altura igual */
     gap: 0px;
 
 
@@ -22,4 +22,16 @@ p {
     color: black;
     font-family: 'Barlow';
     font-weight: 600;
+    font-size: 18px;
+}
+
+.data_app {
+    font-size: 10px;
+    color: #999999;
+    text-wrap:nowrap;
+    text-indent: 20px;
+}
+
+.temp_fixa {
+    font-size: 40px;
 }

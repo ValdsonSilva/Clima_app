@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "./BoxData.style.css"
 import {useQuery} from 'react-query'
 import axios from 'axios';
+import { data_limpa } from '../logic_data/Dia_semana'; 
 
 const key = "923c6f0edf17c6425d91e6f22443e3cd"
 
@@ -9,49 +10,68 @@ const minha_url = `http://api.openweathermap.org/data/2.5/forecast?id=524901&app
 
 function BoxData() {
 
-  const [data, setData] = useState([])
+  // const [data, setData] = useState([])
+  
+  const data = "Valdson"
 
-
-  setTimeout(useEffect(() => {
-      fetch(minha_url)
-      .then((response) => response.json())
-      .then((dado) => {
-        setData(dado)
-      })
-      .catch((erro) => {console.log(`Algo deu errado ai ${erro}!`)})
-  },
-    [] // O array vazia fala para o useEffect fazer apenas 1 requizição ao renderizar o componente
-  ), 0.6)
+  // useEffect(() => {
+  //     fetch(minha_url)
+  //     .then((response) => response.json())
+  //     .then((dado) => {
+  //       // Responsável por ativar novas requisições
+  //       // com base na mudança de estado
+  //       setData(dado)
+  //     })
+  //     .catch((erro) => {console.log(`Algo deu errado ai ${erro}!`)})
+  // },
+  //   [] // O array vazia fala para o useEffect fazer apenas 1 requizição ao renderizar o componente
+  // )
 
   console.log(data)
 
+  const constante_formula = 237.15 // deslocamento entre as escalas
 
-  // const dado = fetch(minha_url)
-  // .then((resp) => resp.json())
-  // .then((data) => {
-  //     //  setData(dado);
-  //     return data
-  // })
-  // .catch((erro) => console.log(`Erro na busca pelos dados!\n${erro}`))
+  // var Temperatura_celsius = ((data.list[0].main.temp) - constante_formula)
 
-  // console.log(dado)
- 
+  // var Temperatura_maxima = ((data.list[0].main.temp_max) - constante_formula)
+
+  // var Temperatura_minima = ((data.list[0].main.temp_min) - constante_formula)
+
   return (
 
     <div className='Boxdata'>
-        {/* {props.children} */}
-        {/* {consumo_api()} */}
-        <p>Data</p>
-        <p>Localidae</p>
-        <p>Aaaaa</p>
+        {/* Nome d.sema, data Mês ano, | hora */}
+        <p className='data_app'>{data_limpa}</p>
+        {/* País e cidade */}
+        <p>
+          {/* {data.city.name} */}
+          {data}
+        </p>
+        {/* situação climática */}
+        <p>
+          {/* {data.list[0].weather[0].main} */}
+          {data}
+        </p>
+
+        {/* Temp.máxima */}
         <p>Baaa</p>
-        <p>Caaa</p>
+        {/* Temperatura fixa */}
+        <p className='temp_fixa'>33°C</p>
+        {/* Temp. mínima */}
         <p>Daaa</p>
+        
+        {/* humidade */}
         <p>Faaa</p>
+        {/* pressão */}
         <p>10</p>
+        {/* nivel d.mar */}
         <p>11</p>
+
+        {/* latitude */}
         <p>12</p>
+        {/* logintude */}
         <p>13</p>
+        {/* sensação térmica */}
         <p>14</p>
         
     </div>
