@@ -3,7 +3,7 @@ import "./CompPai.style.css"
 
 function CompPai(props) {
   return (
-    <div>
+    <div className='comPai'>
         {/* Para receber outros componentes */}
         {props.children}
     </div>

@@ -15,6 +15,66 @@
     filter: drop-shadow(0px -16px 40px rgba(0, 0, 0, 0.20));;
 }
 
+.container_sol_nuvem_padrao, .container_humidade_padrao, .container_pressao_padrao{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 45%;
+    background-color: none;
+    height: 55px;
+}
+
+.container_humidade_padrao {
+    padding-bottom: 5%;
+}
+
+.container_pressao_padrao, .container_vento_padrao {
+    padding-bottom: 4%;
+    background-color: none;
+    width: 120px;
+}
+
+.container_vento_padrao {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 55px;
+    width: 120px;
+    background-color: none;
+}
+
+
+
+.sol_nuvem {
+    position: relative;
+    top: 43px;
+}
+
+.humidade {
+    position: relative;
+    top: 30px;
+}
+
+.pressao {
+    position: relative;
+    top: 30px;
+}
+
+.vento {
+    position: relative;
+    top: 30px;
+}
+
+.nome_pequeno {
+    position: relative;
+    top: -25px;
+    font-size: 8px;
+    color: #999999;
+}
+
+
 p {
     display: flex;
     justify-content: center;
@@ -33,5 +93,25 @@ p {
 }
 
 .temp_fixa {
-    font-size: 40px;
+    font-size: 45px;
+    font-weight: 800;
+}
+
+.container_seta {
+    padding-bottom: 9px;
+}
+
+.imagem_seta {
+    margin-left: -65px;
+    height: 8px;
+    width: 5px;
+} 
+
+.temp {
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 50%;
 }
