@@ -55,7 +55,13 @@ const var = String.substring(string_que_fica, string_que_some).trim()
 
 ----------------------------------------------------------------------------------------
 
-Para acessar uma lista de países e cidades do Google Maps através do JavaScript, você pode utilizar a API de Geocodificação do Google Maps. A API de Geocodificação permite que você converta endereços, cidades, países e outras informações geográficas em coordenadas de latitude e longitude e vice-versa. Aqui estão os passos básicos para fazer isso:
+Para acessar uma lista de países e cidades do 
+Google Maps através do JavaScript, 
+você pode utilizar a API de Geocodificação do Google Maps.
+A API de Geocodificação permite que você converta endereços, 
+cidades, países e outras informações geográficas em 
+coordenadas de latitude e longitude e vice-versa. 
+Aqui estão os passos básicos para fazer isso:
 
 Obtenha uma chave da API do Google Maps:
 

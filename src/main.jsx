@@ -4,9 +4,14 @@ import App from './App.jsx'
 import './index.css'
 import { QueryClient, QueryClientProvider } from 'react-query'
 
+// É obrigatório fazer isso
+const queryClient = new QueryClient()
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   
   <React.StrictMode>
-      <App />
+    <QueryClientProvider client={queryClient}>
+        <App />
+    </QueryClientProvider>
   </React.StrictMode>,
 )
