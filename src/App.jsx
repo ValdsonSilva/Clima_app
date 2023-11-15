@@ -16,6 +16,7 @@ function App() {
 
   return (
     <> 
+        <h1>Clima de Moscow</h1>
         <CompPai>
           <Fundo/>
           <BoxData/>

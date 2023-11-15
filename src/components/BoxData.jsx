@@ -17,14 +17,15 @@ const key = "923c6f0edf17c6425d91e6f22443e3cd"
 
 function BoxData() {
 
-  const [city, setCity] = useState('')
+  const [city, setCity] = useState('Moscow')
 
   // atualiza o state de city
   const HandleCityChange = (event) => {
       setCity(event.target.value)
   }
   
-  //const minha_url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${key}&lang=pt_br`;
+  // const minha_url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${key}&lang=pt_br`;
+  // const minha_url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`
   const minha_url = `http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=${key}`
 
 
@@ -37,6 +38,7 @@ function BoxData() {
 
       }catch(error) {
           throw error
+          console.log(error)
       }
         
   },{
@@ -59,8 +61,14 @@ function BoxData() {
     return <h1>Dados indisponíveis!</h1>
 
   } else {
+    
     const constante_formula = 237.15 // deslocamento entre as escalas
     const main = data.list?.[0]?.main; // list -> [0] -> main
+
+    if (!main){
+        console.log("erro no main!" + '\t' + main)
+        return <h1>Dados indisponíveis!</h1>
+    }
 
     Temperatura_celsius = ((main.temp) - constante_formula).toFixed(0)
     Temperatura_maxima = ((main.temp_max) - constante_formula).toFixed(0)
@@ -77,7 +85,7 @@ function BoxData() {
 
       return <h1>Erro na consulta!</h1>
 
-    // data é undefined?
+    // se deu certo
     }else {
 
       return (
